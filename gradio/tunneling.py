@@ -65,7 +65,9 @@ class Tunnel:
     def start_tunnel(self) -> str:
         self.download_binary()
         self.url = self._start_tunnel(BINARY_PATH)
+        print(f"I FOUND THE URL: {self.url}")
         return self.url
+
 
     def kill(self):
         if self.proc is not None:
